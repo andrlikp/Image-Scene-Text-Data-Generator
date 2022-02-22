@@ -11,3 +11,5 @@ This code generates text into images and creates annotation.txt file for neural 
 6. Specify path where annotation files will be save in yaml file. Variable is <b><i>annotation: path:</b></i>
 7. Specify path to a fonts you want to use by update font names in yaml file. Preset type is <b><i>.otf</b></i>
 8. Execute <b>to_train_AITGM.py</b> without any parameters. All is set now, happy generating.
+
+picture_adjust.ipynb can help a little bit with resolution change including image crop and image mirroring for making bigger image.
