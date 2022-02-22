@@ -10,4 +10,4 @@ This code generates text into images and creates annotation.txt file for neural 
 5. Adjust or make your own yaml file for setting text generator. Example but fully set file is <b>ct.yml</b>
 6. Specify path where annotation files will be save in yaml file. Variable is annotation: path:
 7. Choose a font you want and get it in folder fonts. Then update font names in yaml file. Preset type is <b><i>.otf</b></i>
-8. Execute to_train_AITGM.py without any parameters. All is set now, happy generating.
+8. Execute <b>to_train_AITGM.py</b> without any parameters. All is set now, happy generating.
