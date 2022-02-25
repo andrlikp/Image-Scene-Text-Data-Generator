@@ -401,11 +401,14 @@ class AITGM:
             #text = self.get_text((self.rept_recxx - self.rept_recx-2*self.rept_spacing_x) // (self.rept_fnt_sz),
              #                    self.cfg['reporttitle']['path'])
             text = self.get_one(self.cfg['reporttitle']['path'])
+            textsize = d.textsize(text, self.rept_fnt)
             idx+=1
             if idx>20:
                 text = str(random.randint(1,1000))
+                textsize = d.textsize(text, self.rept_fnt)
             if idx>40:
                 text = 'A'
+                textsize = d.textsize(text, self.rept_fnt)
             if idx>41:
                 text = ''
                 break
