@@ -12,4 +12,4 @@ This code generates text into images and creates annotation.txt file for neural 
 7. Specify path to a fonts you want to use by update font names in yaml file. Preset type is <b><i>.otf</b></i>
 8. Execute <b>to_train_AITGM.py</b> without any parameters. All is set now, happy generating.
 
-picture_adjust.ipynb can help a little bit with preparing background in specific resolution. It does resolution change using <i>image crop</i> and <i>image mirroring</i> for making bigger image.
+picture_adjust.ipynb can help a little bit with preparing background in specific resolution. It crops bigger images to smaller ones, preset is 1280x720. 
