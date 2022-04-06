@@ -1,6 +1,7 @@
 This folder can help you get required ammount of images.
-
-Open and execute in Jupyter Notebook.
+First DOWNLOAD and EXTRACT dataset, then execute file "dataset_extraction_and_download.py" or "dataset_extraction_and_download.ipynb", they are same.
+Codes use threading.
+Adjust number of downloaded images at last line in main(). Default is 6000.
 
 Download link for dataset.
 
