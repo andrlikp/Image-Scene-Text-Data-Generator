@@ -10,6 +10,8 @@ import glob
 import requests
 from IPython.display import clear_output
 from threading import Thread
+import time
+import threading
 
 errors = 0
 downloaded = 0
@@ -22,13 +24,14 @@ def save_img(row,image_name):
         with open('downloaded/'+image_name+'.jpg', 'wb') as handler:
             handler.write(img_data)
         downloaded+=1
-        print('downloaded: '+dowloaded)
     except:
         errors+=1
 
 def main():
     
     global errors
+    global downloaded
+    
     i=0
     path = './'
     documents = ['photos', 'keywords', 'collections', 'conversions', 'colors']
@@ -49,10 +52,15 @@ def main():
             i+=1
             continue
         image_name = datasets['photos']['photo_id'][i]
+        while threading.active_count() >=30:
+            time.sleep(5)
+
         Thread(target=save_img, args=(row, image_name)).start()
+        print('downloaded: '+str(downloaded))
+        #save_img(row, image_name)
         i+=1
         if i>6000+errors:break #zastavovací podmínka
-    
+    print ('errors: ', errors)
 if __name__ == '__main__':
     main()
 
